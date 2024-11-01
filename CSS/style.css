@@ -1,0 +1,217 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url('../images/bg-bottom.svg'), url('../images/bg-top.svg');
+    background-position: left bottom , right top; 
+    background-size: auto, auto; 
+    background-repeat: no-repeat, no-repeat; 
+    background-color: hsl(240, 78%, 98%);
+    background-attachment: fixed, fixed;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width:100vw;
+    padding: 2rem;
+  }
+.outer-container{
+    text-align: center;
+    /* padding: 1rem; */
+    width: 75vw;
+    /* width: 80vw; */
+    
+} 
+h2 {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+.toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+.toggle label {
+    font-size: 1rem;
+    margin: 0 0.5rem;
+    color: #777;
+    font-weight: 700;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 3rem;
+    height: 1.5rem;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #6a5acd;
+    border-radius: 2rem;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.2rem;
+    width: 1.2rem;
+    left: 0.2rem;
+    bottom: 0.15rem;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider:before {
+    transform: translateX(1.5rem);
+}
+.pricing-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+    height: 60vh;
+    width:75vw;
+}
+
+.card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.6rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    width: 25vw;
+    height: 56vh;
+    text-align: center;
+    transition: transform 0.3s ease;
+    display: flex; /* Flex layout */
+    flex-direction: column; /* Arrange items vertically */
+    justify-content: space-between; /* Distribute space evenly */
+}
+/* Hover effect for desktop */
+.card:hover,
+.card:focus-within {
+    /* width: 25vw; */
+    height: 60vh;
+    background-color: #6a5acd;
+    color: white;
+    transform: scale(1.01);
+}
+.card:hover h2,
+.card:focus-within h2{
+    color:white;
+}
+
+
+.card h3 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers the content horizontally */
+    font-size: 3rem;
+    margin-bottom: 0.5em;
+}
+
+.dollar {
+    font-size: 1.5rem; /* Adjust to match visual height */
+    /* margin-right: 0.2rem; Optional spacing between $ and amount */
+    align-self: center; /* Aligns dollar sign to baseline */
+}
+
+.details {
+    font-size: 0.9rem;
+    color: #777;
+    line-height: 1.6;
+}
+
+button {
+        padding: 15px;
+        font-size: 1rem;
+        color: #fff;
+        background-color: #6a5acd;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+}
+
+.card:hover button ,
+.card:focus-within button{
+    background-color: white;
+    color: #6a5acd;
+}
+@media screen and (max-width:375px) {
+    .outer-container {
+        width: 90vw;
+       
+    } 
+    .pricing-cards{
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .card {
+        width: 90vw; 
+        margin-bottom: 30px; 
+        height: 80vh; 
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .card h2 {
+        margin-bottom: 1.5rem; 
+    }
+    .price {
+        margin-bottom: 1.5rem; 
+    }
+    .card p {
+        text-align: center;
+        margin: 1.5rem; 
+    }
+    button {
+        margin-top: 2rem; 
+    }
+    .card hr{
+        width:80%;
+        border-top: 1px solid #ddd;
+    }
+    .card:hover ,
+     .card:focus-within{
+    width: 90vw;
+    
+    }  
+    /* .card:hover button ,
+.card:focus-within button{ 
+    wi
+} */
+
+} 
+
+ 
