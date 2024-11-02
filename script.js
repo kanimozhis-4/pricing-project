@@ -15,5 +15,4 @@ const updatePrices = () => {
 // Add event listener to the checkbox
 document.getElementById('price-toggle').addEventListener('change', updatePrices);
 
-// Set the initial price display based on the default state of the toggle
 updatePrices();
