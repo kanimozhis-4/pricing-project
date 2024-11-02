@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
 }
-body {
+.whole-container{
     background-image: url('../images/bg-bottom.svg'), url('../images/bg-top.svg');
     background-position: left bottom , right top; 
     background-size: auto, auto; 
@@ -26,9 +26,12 @@ body {
     
 } 
 h2 {
-    font-size: 1.3rem;
+    font-size: 2rem;
     margin-bottom: 2rem;
-    color: #333;
+    color: hsl(0, 2%, 33%);
+}
+.card h2{
+    font-size: 1rem;
 }
 .toggle {
     display: flex;
@@ -49,6 +52,8 @@ h2 {
     display: inline-block;
     width: 3rem;
     height: 1.5rem;
+    background-color: #6a5acd;
+    border-radius: 2rem;
 }
 
 .switch input {
@@ -56,21 +61,8 @@ h2 {
     width: 0;
     height: 0;
 }
-
-.slider {
+.slider{
     position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #6a5acd;
-    border-radius: 2rem;
-}
-
-.slider:before {
-    position: absolute;
-    content: "";
     height: 1.2rem;
     width: 1.2rem;
     left: 0.2rem;
@@ -79,7 +71,7 @@ h2 {
     border-radius: 50%;
 }
 
-input:checked + .slider:before {
+input:checked + .slider{
     transform: translateX(1.5rem);
 }
 .pricing-cards {
@@ -101,27 +93,16 @@ input:checked + .slider:before {
     display: flex;
     flex-direction: column; 
     justify-content: space-between; 
-} 
-.Professional-card{
-    background-color: #6a5acd;
-    padding: 2rem;
-    border-radius: 0.6rem;
-    width: 25vw;
-    height: 60vh;
-    text-align: center;
-    display: flex;
-    flex-direction: column; 
-    justify-content: space-between; 
-    color: white;
+    color: #777;
+}  
+.price{
+    color: #333;
+}
 
-    
-}
-.Professional-card h2{
-    color: white;
-}
+
 .card:hover{
     height: 60vh;
-    background-color: #6a5acd;
+    background:linear-gradient(to bottom right ,hsl(236, 72%,79%), hsl(237,63%,64%));
     color: white;
 }
 .card:hover h2{
@@ -147,22 +128,20 @@ input:checked + .slider:before {
     align-self: center; 
 }
 
-button {
+.card button {
         padding: 15px;
         font-size: 1rem;
         color: #fff;
         background-color: #6a5acd;
+        /* background:linear-gradient(to bottom right ,hsl(236, 72%,79%), hsl(237,63%,64%)); */
         border: none;
         border-radius: 5px;
         cursor: pointer;
 }
-.Professional-card button{
-    background-color: white;
-    color: #6a5acd;
-
-}
-.card:hover button ,
-.card:focus-within button{
+ .card:hover .price{
+    color: white;
+ }
+.card:hover button {
     background-color: white;
     color: #6a5acd;
 }
@@ -182,28 +161,17 @@ button {
         width: 90vw; 
         margin-bottom: 30px; 
         height: 80vh; 
+        padding: 1rem;
         text-align: center;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
     }
-    .Professional-card{
-        width: 90vw; 
-        margin-bottom: 30px; 
-        height: 80vh; 
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        background-color: white; 
-        color: black;
-    } 
-
+    
     .card h2 ,.Professional-card h2{
         margin-bottom: 1.5rem; 
-        color: black;
+        color: #777;
     }
     .price {
         margin-bottom: 1.5rem; 
@@ -214,35 +182,34 @@ button {
     }
     button {
         margin-top: 2rem; 
+        width:90%;
         
     }
-    .Professional-card button{
+    /* .Professional-card button{
         color: #fff;
         background-color: #6a5acd;
 
-    }
-    .card hr,.Professional-card hr{
-        width:80%;
+    } */
+    .card hr{
+        width:90%;
         border-top: 1px solid #ddd;
     } 
-    .Professional-card:hover{
+    /* .Professional-card:hover{
         height: 60vh;
     background-color: #6a5acd;
     color: white;
-    transform: scale(1.01);
 
-    } 
-    .Professional-card:hover button{
+    }  */
+    /* .Professional-card:hover button{
         background-color: white;
         color: #6a5acd;
 
     } 
     .Professional-card:hover h2{
         color: white;
-    }
+    } */
     
-    .card:hover ,
-     .card:focus-within{
+    .card:hover {
     width: 90vw;
     
     }  
