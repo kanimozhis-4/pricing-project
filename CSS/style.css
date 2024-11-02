@@ -104,16 +104,32 @@ input:checked + .slider:before {
     display: flex;
     flex-direction: column; 
     justify-content: space-between; 
+} 
+.Professional-card{
+    background-color: #6a5acd;
+    padding: 2rem;
+    border-radius: 0.6rem;
+    width: 25vw;
+    height: 60vh;
+    text-align: center;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+    color: white;
+
+    
 }
-.card:hover,
-.card:focus-within {
+.Professional-card h2{
+    color: white;
+}
+.card:hover{
     height: 60vh;
     background-color: #6a5acd;
     color: white;
     transform: scale(1.01);
 }
-.card:hover h2,
-.card:focus-within h2{
+.card:hover h2{
     color:white;
 }
 
@@ -151,7 +167,11 @@ button {
         border-radius: 5px;
         cursor: pointer;
 }
+.Professional-card button{
+    background-color: white;
+    color: #6a5acd;
 
+}
 .card:hover button ,
 .card:focus-within button{
     background-color: white;
@@ -179,23 +199,59 @@ button {
         align-items: center;
         justify-content: space-between;
     }
-    .card h2 {
+    .Professional-card{
+        width: 90vw; 
+        margin-bottom: 30px; 
+        height: 80vh; 
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        background-color: white; 
+        color: black;
+    } 
+
+    .card h2 ,.Professional-card h2{
         margin-bottom: 1.5rem; 
+        color: black;
     }
     .price {
         margin-bottom: 1.5rem; 
     }
-    .card p {
+    .card p ,.Professional-card p{
         text-align: center;
         margin: 1.5rem; 
     }
     button {
         margin-top: 2rem; 
+        
     }
-    .card hr{
+    .Professional-card button{
+        color: #fff;
+        background-color: #6a5acd;
+
+    }
+    .card hr,.Professional-card hr{
         width:80%;
         border-top: 1px solid #ddd;
+    } 
+    .Professional-card:hover{
+        height: 60vh;
+    background-color: #6a5acd;
+    color: white;
+    transform: scale(1.01);
+
+    } 
+    .Professional-card:hover button{
+        background-color: white;
+        color: #6a5acd;
+
+    } 
+    .Professional-card:hover h2{
+        color: white;
     }
+    
     .card:hover ,
      .card:focus-within{
     width: 90vw;
